@@ -1,0 +1,16 @@
+{{ $baseurl := .Site.BaseUrl }}
+
+<li>
+  <span><h2><a href='{{ .Permalink }}'> {{ .Title }}</a> </h2></span>
+  <span class="left">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+  <span class="right">
+    <ul class="catlist">
+      {{ range .Params.categories }}
+        <li><a href="{{ $baseurl }}/categories/{{ . | urlize }}">{{ . }}</a> </li>
+      {{ end }}
+    </ul>
+  </span>
+
+  <br />
+  {{ .Description }}
+</li>

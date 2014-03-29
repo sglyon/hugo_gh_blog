@@ -1,0 +1,37 @@
+{{ template "chrome/header.html" . }}
+
+<body class="theme-base-08">
+  {{ template "chrome/sidebar.html" . }}
+
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/posts" title="Blog">Blog Posts</a>
+        </h3>
+      </div>
+    </div>
+
+    <div class="container content">
+      <h1 class="post-title">Recent Posts</h1>
+        <section id="main">
+          <div>
+            <h1>Archive of Posts, by {{ .Data.Singular }}</h1>
+            <ul class="category">
+              {{ $data := .Data }}
+              {{ range $key,$value := .Data.Index.ByCount }}
+              <li><a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> ({{ $value.Count }} entries) </li>
+              {{ end }}
+            </ul>
+          </div>
+        </section>
+    </div>
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  <!-- Include footer (ends <body> and <html>) -->
+  {{ template "chrome/footer.html" }}
+
+
+

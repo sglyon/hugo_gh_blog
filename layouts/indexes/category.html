@@ -1,0 +1,36 @@
+{{ template "chrome/header.html" . }}
+
+<body class="theme-base-08">
+  {{ template "chrome/sidebar.html" . }}
+
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/posts" title="Blog">Blog Posts</a>
+        </h3>
+      </div>
+    </div>
+
+    <div class="container content">
+      <h1 class="post-title">Recent Posts</h1>
+        <section id="main">
+          <div>
+            <h5><a href="/categories">Full Category Index</a></h5>
+            <h2>Posts in &ldquo;{{ .Title }}&rdquo;</h2>
+            {{ range .Data.Pages }}
+            {{ .Render "summary"}}
+            {{ end }}
+          </div>
+        </section>
+
+    </div>
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  <!-- Include footer (ends <body> and <html>) -->
+  {{ template "chrome/footer.html" }}
+
+
+

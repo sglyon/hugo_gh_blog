@@ -1,0 +1,35 @@
+{{ template "chrome/header.html" . }}
+
+<body class="theme-base-08">
+  {{ template "chrome/sidebar.html" . }}
+
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/posts" title="Blog">Blog Posts</a>
+        </h3>
+      </div>
+    </div>
+
+    <div class="container content">
+      <h1 class="post-title">{{ .Title }}</h1>
+        <section id="main">
+          <h5 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h5>
+        </section>
+      {{ .Content }}
+    </div>
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  {{ template "chrome/prev_next.html" . }}
+  <br />
+  {{ template "chrome/categories.html" . }}
+
+
+  <!-- Include footer (ends <body class="theme-base-08"> and <html>) -->
+  {{ template "chrome/footer.html" }}
+
+
+

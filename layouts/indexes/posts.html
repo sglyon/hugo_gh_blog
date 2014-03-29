@@ -1,0 +1,35 @@
+{{ template "chrome/header.html" . }}
+
+<body class="theme-base-08">
+  {{ template "chrome/sidebar.html" . }}
+
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/posts" title="Blog">Blog Posts</a>
+        </h3>
+      </div>
+    </div>
+
+    <div class="container content">
+
+    <p>Here are all my blog posts, in descending order by creation date. If you would like to view them by topic, see the <a href="/categories">Categories</a> page.</p>
+      <h1 class="post-title">All Blog Posts (By Date)</h1>
+        <section id="main">
+          <ul id="list">
+            {{ range .Data.Pages }}
+            {{ .Render "li"}}
+            {{ end }}
+          </ul>
+        </section>
+    </div>
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  <!-- Include footer (ends <body> and <html>) -->
+  {{ template "chrome/footer.html" }}
+
+
+

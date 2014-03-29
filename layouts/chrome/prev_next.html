@@ -1,0 +1,15 @@
+<div class="container">
+  <hr />
+  <hr />
+  <span class="left">
+    {{if .Prev}}
+    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="{{.Prev.Permalink}}">{{.Prev.Title}}</a>
+    {{end}}
+  </span>
+
+  <span class="right">
+    {{if .Next}}
+    <em>Next: </em><a class="next" href="{{.Next.Permalink}}"> &nbsp; {{ .Next.Title }}</a> &raquo;
+    {{end}}
+  </span>
+</div>
