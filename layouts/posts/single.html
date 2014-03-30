@@ -1,8 +1,13 @@
+<!--
+  This file is responsible for rendering a single blog post.
+-->
+
 {{ template "chrome/header.html" . }}
 
 <body class="theme-base-08">
   {{ template "chrome/sidebar.html" . }}
 
+  <!-- See /layouts/indexes/category.html for explanation of this section -->
   <div class="wrap">
     <div class="masthead">
       <div class="container">
@@ -12,12 +17,23 @@
       </div>
     </div>
 
+    <!--
+      This is where the actual post is displayed.
+
+      We first access the title metadata field from the markdown source and
+      display it as a heading.
+
+      We then access the date the post was written (also in the markdown
+      metadata) and display a formated version of it
+
+      Finally we include the actual content of the post.
+    -->
     <div class="container content">
       <h1 class="post-title">{{ .Title }}</h1>
         <section id="main">
           <h5 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h5>
+          {{ .Content }}
         </section>
-      {{ .Content }}
     </div>
   </div>
 

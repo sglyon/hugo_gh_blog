@@ -1,8 +1,13 @@
+<!--
+  This file is used to render a list of all posts on our blog.
+-->
+
 {{ template "chrome/header.html" . }}
 
 <body class="theme-base-08">
   {{ template "chrome/sidebar.html" . }}
 
+  <!-- See /layouts/indexes/category.html for explanation of this section -->
   <div class="wrap">
     <div class="masthead">
       <div class="container">
@@ -12,8 +17,14 @@
       </div>
     </div>
 
-    <div class="container content">
+    <!--
+      In this section we have Hugo generate a list of all blog posts, ordered
+      by date.
 
+      When showing each post we ask Hugo to use the template in
+      /layouts/posts/li.html to provide a short description of each post.
+    -->
+    <div class="container content">
     <p>Here are all my blog posts, in descending order by creation date. If you would like to view them by topic, see the <a href="/categories">Categories</a> page.</p>
       <h1 class="post-title">All Blog Posts (By Date)</h1>
         <section id="main">

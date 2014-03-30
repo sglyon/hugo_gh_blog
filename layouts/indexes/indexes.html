@@ -1,8 +1,15 @@
+<!--
+  This file is used to generate the root file of a Hugo index.
+  In our case this is only the index for categories, so it will render the
+  page baseurl/categories
+-->
+
 {{ template "chrome/header.html" . }}
 
 <body class="theme-base-08">
   {{ template "chrome/sidebar.html" . }}
 
+  <!-- See /layouts/indexes/category.html for explanation of this section -->
   <div class="wrap">
     <div class="masthead">
       <div class="container">
@@ -12,8 +19,16 @@
       </div>
     </div>
 
+    <!--
+      In this section we instruct Hugo to list all the different items in the
+      index. Because we only have an index for categories, each item will be
+      a category name. The name is a link to a page that displays all posts in
+      that category.
+
+      We also list the number of entries in each category in parenthesis next
+      to the category name.
+    -->
     <div class="container content">
-      <h1 class="post-title">Recent Posts</h1>
         <section id="main">
           <div>
             <h1>Archive of Posts, by {{ .Data.Singular }}</h1>
