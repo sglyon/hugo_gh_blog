@@ -4,6 +4,6 @@ layoutdir: "layouts"
 publishdir: "public"
 indexes:
   category: "categories"
-baseurl: "http://sglyon.com/hugo_gh_blog"
+baseurl: "http://spencerlyon2.github.io/hugo_gh_blog"
 title: "Hugo Blog Template for GitHub Pages"
 ...
