@@ -3,7 +3,7 @@
   <channel>
       <title>Boring on Hugo Blog Template for GitHub Pages </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>/categories/boring/index.xml</link>
+    <link>http://spencerlyon2.github.io/categories/boring/index.xml</link>
     
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Second Post</title>
-      <link>/posts/middle</link>
+      <link>http://spencerlyon2.github.io/posts/middle</link>
       <pubDate>Fri, 28 Mar 2014 00:00:00 UTC</pubDate>
       
-      <guid>/posts/middle</guid>
+      <guid>http://spencerlyon2.github.io/posts/middle</guid>
       <description>
 
 &lt;h2 id=&#34;toc_0&#34;&gt;Sample Post 1&lt;/h2&gt;
