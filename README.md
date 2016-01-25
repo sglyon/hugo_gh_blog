@@ -11,7 +11,7 @@ Template repo for a blog built with Hugo deployed on github-pages
 ### Snippet
 
 Quick start
-* Run **`` hugo server ``** command on hugo_gh_blog folder.
+* Run hugo server on hugo_gh_blog folder.
 
    ``` 
    hugo server 
