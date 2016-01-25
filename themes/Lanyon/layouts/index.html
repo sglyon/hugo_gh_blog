@@ -14,11 +14,11 @@
     <link rel="canonical" href="{{ .Permalink }}">
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
-    {{ template "chrome/head_includes.html" . }}
+    {{ partial "head_includes.html" . }}
 </head>
   <body class="theme-base-08" lang="en">
 
-  {{ template "chrome/sidebar.html" . }}
+  {{ partial "sidebar.html" . }}
 
   <!-- See /layouts/indexes/category.html for explanation of this section -->
     <div class="wrap">
@@ -74,4 +74,4 @@
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-{{ template "chrome/footer.html" }}
+{{ partial "footer.html" . }}
