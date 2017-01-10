@@ -3,7 +3,7 @@
 ### hugo_gh_blog 
 Template repo for a blog built with Hugo deployed on github-pages
 
-### [Demo](http://spencerlyon2.github.io/hugo_gh_blog)
+### [Demo](http://spencerlyon.com/hugo_gh_blog/)
 
 
 ---
